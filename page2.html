@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Other page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/page2.html" aria-current="page">Other page</a>
+    </nav>
+    <main>
+      <h1>Web component</h1>
+      <h2>This "custom element" simply extends the HtmlDialogElement !</h2>
+      <p>Similar to how css "variables" are simply "custom properties"</p>
+      <button>open dialog</button>
+      <dialog>
+        <style>
+          .lock {
+            overflow: hidden;
+          }
+        </style>
+        <h3>Welcome to my dialog</h3>
+        <button>close dialog</button>
+      </dialog>
+      <p>Try it here.</p>
+      <div class="scroll">Very long section</div>
+    </main>
+  </body>
+</html>

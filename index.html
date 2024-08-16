@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Default</a>
+      <a href="/page2.html">Extended</a>
+    </nav>
+    <main>
+      <h1>Default HtmlDialog Element</h1>
+      <button>open dialog</button>
+      <dialog>
+        <h3>Welcome to my dialog</h3>
+        <b>Default behaviors:</b>
+        <ul>
+          <li>autofocus</li>
+          <li><code>esc</code> to close</li>
+          <li>Returns focus after closing</li>
+          <li>Always on top, without z-index (or portals!)</li>
+          <li>
+            backdrop is styled via <code>::backdrop</code> pseudo-selector
+          </li>
+        </ul>
+        <b>Default problems:</b>
+        <ul>
+          <li>Scrolls content behind</li>
+          <li>Does not close on click outside</li>
+        </ul>
+        <button>close dialog</button>
+      </dialog>
+      <div class="scroll">Very long section</div>
+    </main>
+  </body>
+</html>
