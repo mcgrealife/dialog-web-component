@@ -5,6 +5,8 @@ Extends HtmlDialog to:
 2. Allow "click to close" outside
 
 
-This example is not optimized to remove listeners.
-
-I'd still like to explore `template`, `slots`.
+<details>
+<summary>Todo</summary>
+- cleanup listeners
+- explore `template` and `slots
+</details>
