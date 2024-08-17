@@ -18,11 +18,14 @@
 
       <!-- When custom element extends an HtmlElement, it is used via `is` attribute -->
       <dialog is="dialog-extended" closeOnClickOutside="true" scrollLock="true" state>
-        <h3>This is a web component!</h3>
-        <p>It is registered as a <code>customElement</code> that <i>extends</i> the <code>HtmlDialogElement</code>!</p>
-        <i>(Similar to how "css variables" are css "custom properties")</i>
+        <h3>This is a "Custom Element" that extends the HtmlDialogElement</h3>
 
-        <h5>It has all the benefits of the HtmlDialogElement -- without the limitations!</h5>
+        <ul>
+          <li>Try to scroll behind</li>
+          <li>Try to click outside</li>
+          <li>Observe its <code>state</code> attribute</li>
+        </ul>
+        
         <button>close dialog</button>
       </dialog>
       
