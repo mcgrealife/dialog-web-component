@@ -1,12 +1,10 @@
-# web-component that extends HtmlDialog
+# Web component example
 
-Extends HtmlDialog to:
+### Extends HtmlDialog to:
 1. prevent scroll behind
 2. Allow "click to close" outside
 
 
-<details>
-<summary>Todo</summary>
-- cleanup listeners
-- explore `template` and `slots
-</details>
+___
+
+_Todo: cleanup listeners, explore template and slots_
