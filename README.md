@@ -1,8 +1,6 @@
-# Web component example
-
-### Extends HtmlDialog to:
-1. prevent scroll behind
-2. Allow "click to close" outside
+# Web component extends HtmlDialog
+- Prevents scroll behind
+- Allows "click to close" outside
 
 
 ___
