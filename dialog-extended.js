@@ -41,6 +41,8 @@ class DialogExtended extends HTMLDialogElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
+        // this callback is unique to custom elements. 
+        // like a scoped mutation observer!
         if (name === "state") {
             const shouldScrollLock = this.getAttribute('scrollLock');
 
