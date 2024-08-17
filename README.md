@@ -1,3 +1,9 @@
-# dialog-web-component
+# web-component that extends HtmlDialog
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/mcgrealife/dialog-web-component)
+Extends HtmlDialog to:
+1. prevent scroll behind
+2. Allow "click to close" outside
+
+I'd still like to explore `template`, `slots`, and `onAttributeChanged` lifecycle method.
+
+This example is not optimized to remove listeners.
