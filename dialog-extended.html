@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Other page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="dialog-extended.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Dialog</a>
+      <a href="/dialog-extended.html" aria-current="page">Web component</a>
+    </nav>
+    <main>
+      <h1>Web component</h1>
+      <button id="open-custom-dialog">open dialog</button>
+
+      <!-- When custom element extends an HtmlElement, it is used via `is` attribute -->
+      <dialog is="dialog-extended" closeOnClickOutside="true" scrollLock="true">
+        <h3>This is a web component!</h3>
+        <p>It is registered as a <code>customElement</code> that <i>extends</i> the <code>HtmlDialogElement</code>!</p>
+        <i>(Similar to how "css variables" are css "custom properties")</i>
+
+        <h5>It has all the benefits of the HtmlDialogElement -- without the limitations!</h5>
+        <button>close dialog</button>
+      </dialog>
+      
+      <!-- If custom element extends HtmlElement, it is used like this -->
+      <dialog-extended></dialog-extended>
+      <div class="scroll">Very long section</div>
+    </main>
+  </body>
+</html>

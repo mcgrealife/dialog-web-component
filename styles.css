@@ -25,6 +25,11 @@ main button {
   width: fit-content;
 }
 
+dialog::backdrop {
+  background-color: salmon;
+  opacity: 0.5;
+}
+
 .scroll {
   height: 150vh;
   background: linear-gradient(white, tan);
@@ -33,9 +38,8 @@ main button {
   justify-content: center;
 }
 
-dialog::backdrop {
-  background-color: salmon;
-  opacity: 0.5;
+.scrollLock {
+  overflow: hidden;
 }
 
 
