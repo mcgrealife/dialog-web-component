@@ -20,6 +20,7 @@ class DialogExtended extends HTMLDialogElement {
 
         if (this.getAttribute('closeOnClickOutside')) {
             const dialog = document.querySelector('dialog');
+            // todo: remove listeners
             document.addEventListener("mousedown", event => {
                 const rect = dialog.getBoundingClientRect();
                 const isInDialog = rect.top <= event.clientY && event.clientY <= rect.bottom &&
