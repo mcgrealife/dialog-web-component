@@ -15,7 +15,7 @@ sectionDefault.querySelector('dialog > button').addEventListener('click', () => 
 const sectionExtented = document.querySelector('section#extended');
 const dialogExtended = sectionExtented.querySelector('dialog');
 class DialogExtended extends HTMLDialogElement {
-  static observedAttributes = ["open"];
+  static observedAttributes = ["state"];
 
   constructor() {
       super();
@@ -55,23 +55,24 @@ class DialogExtended extends HTMLDialogElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-      console.log({name, oldValue, newValue});
-      // this callback is unique to custom elements(like a scoped mutation observer!)
-      if (name === "open") {
+      // this callback is unique to custom elements. 
+      // like a scoped mutation observer!
+      if (name === "state") {
           const shouldScrollLock = this.getAttribute('scrollLock');
 
-          if (newValue==="") {
+          if (newValue === "open") {
+          //  document.querySelector('.scroll p').textContent = "Scroll is locked! And click outside will close dialog."
            if (shouldScrollLock) {
                document.body.classList.add('scrollLock');
            }
-          } else {
+          }
+
+          if (newValue === "closed") {
+              // document.querySelector('.scroll p').textContent = "Very long scrollable section"
               if (shouldScrollLock) {
                   document.body.classList.remove('scrollLock');
               }
           }
-
-          
-          
 
       }
 
