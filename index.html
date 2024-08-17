@@ -8,33 +8,48 @@
     <script type="module" src="index.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Dialog</a>
-      <a href="/dialog-extended.html">Web component</a>
-    </nav>
     <main>
-      <h1>Default HtmlDialog Element</h1>
-      <button>open dialog</button>
-      <dialog>
-        <h3>This is a default HtmlDialog Element</h3>
-        <p>Baseline available since March 2022</p>
-        <b>Benefits:</b>
-        <ul>
-          <li>autofocus</li>
-          <li><code>esc</code> to close</li>
-          <li>Returns focus after closing</li>
-          <li>Always on top, without z-index (or portals!)</li>
-          <li>
-            backdrop is styled via <code>::backdrop</code> pseudo-selector
-          </li>
-        </ul>
-        <b>Limitations:</b>
-        <ul>
-          <li><b>Scrolls content behind</b></li>
-          <li>Does not close on click outside</li>
-        </ul>
-        <button>close dialog</button>
-      </dialog>
+      <h1>Default HtmlDialog vs Extended HtmlDialog</h1>
+      
+      <section id="default">
+        <button class="open">open default html dialog</button>
+        <dialog id="default-dialog">
+          <h3>This is a default HtmlDialog Element</h3>
+          <p>Baseline available since March 2022</p>
+          <b>Benefits:</b>
+          <ul>
+            <li>autofocus</li>
+            <li><code>esc</code> to close</li>
+            <li>Returns focus after closing</li>
+            <li>Always on top, without z-index (or portals!)</li>
+            <li>
+              backdrop is styled via <code>::backdrop</code> pseudo-selector
+            </li>
+          </ul>
+          <b>Limitations:</b>
+          <ul>
+            <li><b>Scrolls content behind</b></li>
+            <li>Does not close on click outside</li>
+          </ul>
+          <button>close dialog</button>
+        </dialog>
+      </section>
+
+      <section id="extended">
+        <button class="open">open "web component" dialog</button>
+        <dialog is="dialog-extended" closeOnClickOutside="true" scrollLock="true" state>
+          <h3>This is a "Custom Element" that extends the HtmlDialogElement</h3>
+  
+          <ul>
+            <li>Try to scroll behind</li>
+            <li>Try to click outside</li>
+            <li>Observe its <code>state</code> attribute</li>
+          </ul>
+          
+          <button>close dialog</button>
+        </dialog>
+      </section>
+
       <div class="scroll">Very long scrollable section</div>
     </main>
   </body>
