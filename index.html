@@ -9,15 +9,16 @@
   </head>
   <body>
     <nav>
-      <a href="/" aria-current="page">Default</a>
-      <a href="/page2.html">Extended</a>
+      <a href="/" aria-current="page">Dialog</a>
+      <a href="/page2.html">Web component</a>
     </nav>
     <main>
       <h1>Default HtmlDialog Element</h1>
       <button>open dialog</button>
       <dialog>
-        <h3>Welcome to my dialog</h3>
-        <b>Default behaviors:</b>
+        <h3>This is a default HtmlDialog Element</h3>
+        <p>Baseline available since March 2022</p>
+        <b>Benefits:</b>
         <ul>
           <li>autofocus</li>
           <li><code>esc</code> to close</li>
@@ -27,9 +28,9 @@
             backdrop is styled via <code>::backdrop</code> pseudo-selector
           </li>
         </ul>
-        <b>Default problems:</b>
+        <b>Limitations:</b>
         <ul>
-          <li>Scrolls content behind</li>
+          <li><b>Scrolls content behind</b></li>
           <li>Does not close on click outside</li>
         </ul>
         <button>close dialog</button>
