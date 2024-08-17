@@ -27,8 +27,8 @@
         <dialog id="default-dialog">
           <h3>Default HtmlDialog Element</h3>
           <ul>
-            <li>Try to scroll behind</li>
-            <li>Try to click outside</li>
+            <li>Scrolls content behind 👎</li>
+            <li>Click outside does not close 👎</li>
           </ul>
           <button>close dialog</button>
         </dialog>
@@ -40,9 +40,9 @@
           <h3>"Custom Element" that extends HtmlDialog</h3>
   
           <ul>
-            <li>Try to scroll behind</li>
-            <li>Try to click outside</li>
-            <li>Observe its <code>state</code> attribute</li>
+            <li>Scroll is locked 👍</li>
+            <li>Click outside closes dialog 👍</li>
+            <li>Manages state via <code>state</code> attribute</li>
           </ul>
           
           <button>close dialog</button>
