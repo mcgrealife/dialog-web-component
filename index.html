@@ -9,36 +9,35 @@
   </head>
   <body>
     <main>
-      <h1>Default HtmlDialog vs Extended HtmlDialog</h1>
-      
+      <section>
+        <h1>Default HtmlDialog vs Extended HtmlDialog</h1>
+        <p>The default HtmlDialog (baseline since March 2022) has these benefits:</p>
+        <ul>
+          <li>autofocus inside</li>
+          <li><code>esc</code> to close</li>
+          <li>Returns focus after closing</li>
+          <li>Uses top-layer (no z-index or portals!)</li>
+          <li><code>::backdrop</code> pseudo-selector</li>
+        </ul>
+        <h4>But has some limitations. Can we solve them using web components?</h4>
+    </section>
+
       <section id="default">
-        <button class="open">open default html dialog</button>
+        <button class="open">default html dialog</button>
         <dialog id="default-dialog">
-          <h3>This is a default HtmlDialog Element</h3>
-          <p>Baseline available since March 2022</p>
-          <b>Benefits:</b>
+          <h3>Default HtmlDialog Element</h3>
           <ul>
-            <li>autofocus</li>
-            <li><code>esc</code> to close</li>
-            <li>Returns focus after closing</li>
-            <li>Always on top, without z-index (or portals!)</li>
-            <li>
-              backdrop is styled via <code>::backdrop</code> pseudo-selector
-            </li>
-          </ul>
-          <b>Limitations:</b>
-          <ul>
-            <li><b>Scrolls content behind</b></li>
-            <li>Does not close on click outside</li>
+            <li>Try to scroll behind</li>
+            <li>Try to click outside</li>
           </ul>
           <button>close dialog</button>
         </dialog>
       </section>
 
       <section id="extended">
-        <button class="open">open "web component" dialog</button>
+        <button class="open">"web component" dialog</button>
         <dialog is="dialog-extended" closeOnClickOutside="true" scrollLock="true" state>
-          <h3>This is a "Custom Element" that extends the HtmlDialogElement</h3>
+          <h3>"Custom Element" that extends HtmlDialog</h3>
   
           <ul>
             <li>Try to scroll behind</li>
