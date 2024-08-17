@@ -1,20 +1,23 @@
 class DialogExtended extends HTMLDialogElement {
+    static observedAttributes = ["state"];
+
     constructor() {
         super();
       }
+
 
     connectedCallback() {
 
         document.querySelector("#open-custom-dialog").addEventListener("click", () => {
             this.showModal();
+            this.setAttribute('state', "open")
 
-            if (this.getAttribute('scrollLock')) {
-                document.body.classList.add('scrollLock');
-            }
+
         })
         
         this.querySelector(":scope button").addEventListener("click", () => {
             this.close();
+            this.setAttribute('state', "closed")
         })
 
 
@@ -28,13 +31,36 @@ class DialogExtended extends HTMLDialogElement {
 
                 if (!isInDialog) {
                     this.close();
-                    document.body.classList.remove('scrollLock');
+                    this.setAttribute('state', "closed")
+
                 }
             }, false);
 
         }
-
+        
     }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === "state") {
+            const shouldScrollLock = this.getAttribute('scrollLock');
+
+            if (newValue === "open") {
+             document.querySelector('.scroll p').textContent = "Scroll is locked! And click outside will close dialog."
+             if (shouldScrollLock) {
+                 document.body.classList.add('scrollLock');
+             }
+            }
+
+            if (newValue === "closed") {
+                document.querySelector('.scroll p').textContent = "Very long scrollable section"
+                if (shouldScrollLock) {
+                    document.body.classList.remove('scrollLock');
+                }
+            }
+
+        }
+
+      }
 
 }
 

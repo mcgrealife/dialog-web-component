@@ -17,7 +17,7 @@
       <button id="open-custom-dialog">open dialog</button>
 
       <!-- When custom element extends an HtmlElement, it is used via `is` attribute -->
-      <dialog is="dialog-extended" closeOnClickOutside="true" scrollLock="true">
+      <dialog is="dialog-extended" closeOnClickOutside="true" scrollLock="true" state>
         <h3>This is a web component!</h3>
         <p>It is registered as a <code>customElement</code> that <i>extends</i> the <code>HtmlDialogElement</code>!</p>
         <i>(Similar to how "css variables" are css "custom properties")</i>
@@ -28,7 +28,7 @@
       
       <!-- If custom element extends HtmlElement, it is used like this -->
       <dialog-extended></dialog-extended>
-      <div class="scroll">Very long section, only scrollable when dialog is closed</div>
+      <div class="scroll"><p>Very long scrollable section</p></div>
     </main>
   </body>
 </html>
