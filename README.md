@@ -3,6 +3,4 @@
 - Allows "click to close" outside
 
 
-___
-
-_Todo: cleanup listeners, explore template and slots, focus trap?_
+> ⚠️ I have since learned that [Safari does not support](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/is) the `is` attribute
